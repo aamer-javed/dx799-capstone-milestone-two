@@ -1,0 +1,43 @@
+# DX799 Data Science Capstone - Milestone Two
+
+Boston University Online Master of Data Science, DX799 Data Science Capstone (Fall 2026).
+
+This repository contains the executed Jupyter notebooks and cleaned customer-level dataset used for Milestone Two. The analysis focuses on customer similarity, nonlinear prediction, and unsupervised customer segmentation for e-commerce retention and engagement.
+
+## Notebooks
+
+1. **K-Nearest Neighbors and Distance Metrics**  
+   `DX79901_Week8_KNN_Distance_Metrics_Javed_Aamer.ipynb`
+2. **Gradient Boosting**  
+   `DX79901_Week9_Gradient_Boost_Javed_Aamer.ipynb`
+3. **K-Means and Silhouette Score**  
+   `DX79901_Week10_KMeans_Clustering_Javed_Aamer.ipynb`
+4. **DBSCAN and Hierarchical Agglomerative Clustering**  
+   `DX79901_Week11_Clustering_Part2_Javed_Aamer.ipynb`
+
+## Data
+
+The notebooks use the shared cleaned dataset:
+
+`data/churn_clean.csv`
+
+The file contains 5,630 customer-level records and the features used throughout the Milestone Two analyses. `Churn` is used as a supervised target in the KNN analysis and as a post-hoc profile variable for the unsupervised clustering analyses.
+
+## Reproducing the notebooks
+
+Clone the repository and start Jupyter from the repository root so each notebook can resolve `data/churn_clean.csv`:
+
+```bash
+git clone https://github.com/aamer-javed/dx799-capstone-milestone-two.git
+cd dx799-capstone-milestone-two
+pip install -r requirements.txt
+jupyter notebook
+```
+
+The notebooks were developed with Python and use pandas, NumPy, matplotlib, SciPy, and scikit-learn.
+
+## Notes
+
+- The notebooks are intentionally retained with their original course filenames so they correspond directly to the appendix in the Milestone Two report.
+- Model results are predictive or descriptive and should not be interpreted as causal effects.
+- A later robustness audit identified repeated predictor profiles that could cross a random train/test split; the Milestone Two report discusses the grouped-profile sensitivity analysis separately.
